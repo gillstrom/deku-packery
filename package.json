@@ -1,0 +1,81 @@
+{
+  "name": "deku-packery",
+  "version": "0.0.0",
+  "description": "Packery component for Deku",
+  "license": "MIT",
+  "repository": "gillstrom/deku-packery",
+  "author": {
+    "name": "Andreas Gillström",
+    "email": "andreasgillstrom@gmail.com",
+    "url": "github.com/gillstrom"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "browserify example/index.js -o example/build.js -dv",
+    "prepublish": "babel  --presets es2015,react index.js --out-file dist.js",
+    "test": "xo"
+  },
+  "main": "dist.js",
+  "files": [
+    "dist.js"
+  ],
+  "keywords": [
+    "deku",
+    "dekujs",
+    "component",
+    "masonry",
+    "packery"
+  ],
+  "dependencies": {
+    "imagesloaded": "^3.2.0",
+    "magic-virtual-element": "^1.0.6",
+    "object-omit": "^1.0.0",
+    "packery": "^1.4.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "deku": "^1.0.0 ",
+    "eslint-config-xo-react": "^0.3.0",
+    "eslint-plugin-react": "^3.9.0",
+    "xo": "*"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react"
+          ]
+        }
+      ]
+    ]
+  },
+  "xo": {
+    "envs": [
+      "browser",
+      "node"
+    ],
+    "esnext": true,
+    "extends": [
+      "xo-react"
+    ],
+    "ignores": [
+      "dist.js",
+      "example/**"
+    ],
+    "rules": {
+      "jsx-quotes": [2, "prefer-single"],
+      "react/no-unknown-property": 0,
+      "react/prop-types": 0,
+      "quote-props": 0
+    }
+  }
+}

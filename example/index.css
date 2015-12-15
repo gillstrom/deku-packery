@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 1400px;
+	padding: 0;
+	margin: 0;
+}
+
+.Packery-size,
+.Packery-item {
+	width: 25%;
+}
+
+.Packery-item,
+.Packery-stamp {
+	height: 150px;
+}
+
+.Packery-stamp {
+	position: absolute;
+}
+
+.Packery-stamp--1 {
+	left: 75%;
+	width: 25%;
+	height: 300px;
+}
+
+.Packery-stamp--2 {
+	top: 150px;
+	left: 0;
+	width: 50%;
+}
