@@ -1,6 +1,6 @@
 {
   "name": "deku-packery",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Packery component for Deku",
   "license": "MIT",
   "repository": "gillstrom/deku-packery",
@@ -72,7 +72,10 @@
       "example/**"
     ],
     "rules": {
-      "jsx-quotes": [2, "prefer-single"],
+      "jsx-quotes": [
+        2,
+        "prefer-single"
+      ],
       "react/no-unknown-property": 0,
       "react/prop-types": 0,
       "quote-props": 0
