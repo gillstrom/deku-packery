@@ -1,4 +1,5 @@
 /** @jsx dom */
+import deepEqual from 'deep-equal';
 import dom from 'magic-virtual-element';
 import imagesloaded from 'imagesloaded';
 import objectOmit from 'object-omit';
@@ -29,9 +30,11 @@ const afterRender = ({props}, el) => {
 	});
 };
 
+const shouldUpdate = ({props}, nextProps) => !deepEqual(props, nextProps);
+
 const render = ({props}) => {
 	const {children, component} = props;
 	return dom(component, objectOmit(props, Object.keys(propTypes)), children);
 };
 
-export default {afterRender, defaultProps, propTypes, render};
+export default {afterRender, defaultProps, propTypes, render, shouldUpdate};

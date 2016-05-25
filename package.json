@@ -30,6 +30,7 @@
     "packery"
   ],
   "dependencies": {
+    "deep-equal": "^1.0.1",
     "imagesloaded": "^4.1.0",
     "magic-virtual-element": "^1.0.6",
     "object-omit": "^1.0.0",
