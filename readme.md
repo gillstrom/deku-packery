@@ -15,14 +15,16 @@ $ npm install --save deku-packery
 ```js
 import Packery from 'deku-packery';
 
-export function render() {
+const render = () => {
 	return (
 		<Packery>
 			<img src='cat.jpg' alt=''/>
 			<img src='unicorn.jpg' alt=''/>
 		</Packery>
 	);
-}
+};
+
+export default {render};
 ```
 
 

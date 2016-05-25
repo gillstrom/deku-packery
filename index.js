@@ -20,18 +20,18 @@ const defaultProps = {
 	component: 'div'
 };
 
-function afterRender({props}, el) {
+const afterRender = ({props}, el) => {
 	const {options} = props;
 
 	imagesloaded(el, () => {
 		const packery = new Packery(el, options);
 		packery.layout();
 	});
-}
+};
 
-function render({props}) {
+const render = ({props}) => {
 	const {children, component} = props;
 	return dom(component, objectOmit(props, Object.keys(propTypes)), children);
-}
+};
 
 export default {afterRender, defaultProps, propTypes, render};
