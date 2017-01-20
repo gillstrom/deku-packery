@@ -26,7 +26,14 @@ const afterRender = ({props}, el) => {
 
 	imagesloaded(el, () => {
 		const packery = new Packery(el, options);
+		let resizeTimer;
+
 		packery.layout();
+
+		window.addEventListener('resize', () => {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => packery.layout(), 100);
+		});
 	});
 };
 
